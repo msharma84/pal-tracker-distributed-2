@@ -6,7 +6,8 @@ applications:
   #- route: allocations-pal-{UNIQUE_IDENTIFIER}.apps.chicken.pal.pivotal.io
   memory: 1G
   instances: 1
-  env:
-    REGISTRATION_SERVER_ENDPOINT: http://tracker-registration-1.apps.nonprod.dryice01.in.hclcnlabs.com
+  #env:
+   # REGISTRATION_SERVER_ENDPOINT: http://tracker-registration-1.apps.nonprod.dryice01.in.hclcnlabs.com
   services:
   - tracker-allocations-database
+  - tracker-service-registry
