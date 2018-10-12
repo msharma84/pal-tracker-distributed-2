@@ -6,9 +6,13 @@ applications:
   #- route: timesheets-pal-{UNIQUE_IDENTIFIER}.apps.chicken.pal.pivotal.io
   memory: 1G
   instances: 1
-  # env:
+  env:
+    GRANT_TYPE: client_credentials
+    SECURITY_USER_NAME: actuator
+    SECURITY_USER_PASSWORD: operations4red
     # REGISTRATION_SERVER_ENDPOINT: http://tracker-registration-1.apps.nonprod.dryice01.in.hclcnlabs.com
   services:
   - tracker-timesheets-database
   - tracker-service-registry
   - tracker-circuit-breaker-dashboard
+  - tracker-sso
